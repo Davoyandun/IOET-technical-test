@@ -1,8 +1,9 @@
-// var fs = require("fs");
-// var arrayFile = fs.readFileSync('./workers.txt', 'UTF-8').split("\r\n")
+const fs = require("fs");
+const URL = "C:/Users/Dell/Desktop/Nueva carpeta (2)/IOET-technical-test/src/workers.txt"
+const arrayFile = fs.readFileSync(URL, "UTF-8").split("\r\n");
 
-// table ordering in weeks
-export const orderList  = (table) => {
+//table ordering in weeks
+const orderList = (table) => {
   return table.map((element) => {
     let orders = [];
     let index = element.indexOf("=");
@@ -39,23 +40,28 @@ export const orderList  = (table) => {
           return orders;
         })[0],
     };
-    return obj
+    return obj;
   });
- 
 };
 
-export const startEnd = (string) => {
+const startEnd = (string) => {
   let index = string.indexOf("-");
 
-  return ` ${string.slice(2, index)} , ${string.slice(index + 1)} ` 
+  return ` ${string.slice(2, index)} , ${string.slice(index + 1)} `;
 };
 
-let finalTable = orderList(["ESTHER=TU10:00-18:00,WE20:00-22:00,TH16:00-20:15"])
-
- console.log(finalTable )
+let orderTable = orderList(arrayFile);
 
 
 
- // 
 
 
+
+
+
+
+// exports
+module.exports = {
+  orderList,
+  startEnd,
+};
