@@ -24,7 +24,7 @@ node index.js
 
 
 
-##solution overview
+## solution overview
 
 To finish this challenging challenge I divided the problem into three parts.
 
@@ -34,6 +34,9 @@ To finish this challenging challenge I divided the problem into three parts.
 
 
 -Finally, I compare the array of all the employees in each position and for each coincidence, an accumulator adds the coincidences, which I then transform into hours and minutes and show on the screen.
+
+
+
 
 
 
