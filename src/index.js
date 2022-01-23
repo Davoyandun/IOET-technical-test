@@ -64,8 +64,8 @@ const workTableTogether = (schedule) => {
   return coworkers;
 };
 
-const employeeTable= workTableTogether(ObjSchedule)
-console.table(employeeTable);
+//const employeeTable= workTableTogether(ObjSchedule)
+//console.table(employeeTable);
 
 // exports
 module.exports = {
