@@ -1,5 +1,6 @@
 # IOET technical test
-![image](https://user-images.githubusercontent.com/70674906/150671910-007e96c7-b67a-4866-a36a-99156516e48c.png)
+![image](https://user-images.githubusercontent.com/70674906/150671942-3d351435-ec09-4228-b999-d799de216893.png)
+
 
 
 ## Instructions
