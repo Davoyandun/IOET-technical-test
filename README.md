@@ -1,6 +1,8 @@
 # IOET technical test
+![image](https://user-images.githubusercontent.com/70674906/150671910-007e96c7-b67a-4866-a36a-99156516e48c.png)
 
-## instructionsinstructions
+
+## Instructions
 1. Clone the repository on your local machine
 
 2. Open your console and go to the /IOET-technical-test folder
@@ -24,7 +26,7 @@ node index.js
 
 
 
-## solution overview
+## Solution overview
 
 To finish this challenging challenge I divided the problem into three parts.
 
@@ -34,6 +36,22 @@ To finish this challenging challenge I divided the problem into three parts.
 
 
 - Finally, I compare the array of all the employees in each position and for each coincidence, an accumulator adds the coincidences, which I then transform into hours and minutes and show on the screen.
+
+- To run the tests, inside the /IOET-technical-test folder run the command npm run test and you can see the results in the console
+
+
+My project contemplates both the handling of hours, as well as minutes, and with small changes it could contemplate seconds
+There is the utilities folder in which I included secondary functions.
+The first tests were written before starting to develop the functionalities.
+SOLID principles were used to maintain good practices.
+
+
+
+
+
+
+
+
 
 
 
