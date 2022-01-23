@@ -28,12 +28,12 @@ node index.js
 
 To finish this challenging challenge I divided the problem into three parts.
 
--first import the .txt and separate each employee into an array element
+- first import the .txt and separate each employee into an array element
 
--then separate each string into an object I have its key the name of the employee and its value an array with an element for each day of the week and within this, an array with the hours worked separated in minutes
+- then separate each string into an object I have its key the name of the employee and its value an array with an element for each day of the week and within this, an array with the hours worked separated in minutes
 
 
--Finally, I compare the array of all the employees in each position and for each coincidence, an accumulator adds the coincidences, which I then transform into hours and minutes and show on the screen.
+- Finally, I compare the array of all the employees in each position and for each coincidence, an accumulator adds the coincidences, which I then transform into hours and minutes and show on the screen.
 
 
 
