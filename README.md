@@ -40,7 +40,11 @@ To finish this challenging challenge I divided the problem into three parts.
 
 - Finally, I compare the array of all the employees in each position and for each coincidence, an accumulator adds the coincidences, which I then transform into hours and minutes and show on the screen.
 
-- To run the tests, inside the /IOET-technical-test folder run the command npm run test and you can see the results in the console
+- To run the tests, inside the /IOET-technical-test folder run the command
+```bash
+npm run test
+``` 
+-   and you can see the results in the console
 
 ## Architecture
 My project contemplates both the handling of hours, as well as minutes, and with small changes it could contemplate seconds
