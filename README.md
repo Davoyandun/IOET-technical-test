@@ -1,5 +1,7 @@
 # IOET technical test
 ![image](https://user-images.githubusercontent.com/70674906/150671942-3d351435-ec09-4228-b999-d799de216893.png)
+![image](https://user-images.githubusercontent.com/70674906/150671965-f06c7bca-62a1-48ba-bca3-dd519e09897c.png)
+
 
 
 
@@ -40,11 +42,17 @@ To finish this challenging challenge I divided the problem into three parts.
 
 - To run the tests, inside the /IOET-technical-test folder run the command npm run test and you can see the results in the console
 
-
+## Architecture
 My project contemplates both the handling of hours, as well as minutes, and with small changes it could contemplate seconds
 There is the utilities folder in which I included secondary functions.
 The first tests were written before starting to develop the functionalities.
 SOLID principles were used to maintain good practices.
+The code is written in ES6, for a better understanding and update
+The code has been written under the standards of the declarative programming paradigm
+
+
+
+
 
 
 
