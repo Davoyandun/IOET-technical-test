@@ -1,16 +1,17 @@
-const { table } = require("console");
+const { accumulatorTime, convertToMinutes } = require("./utils");
 const fs = require("fs");
 const URL =
   "C:/Users/Dell/Desktop/Nueva carpeta (2)/IOET-technical-test/src/workers.txt";
 const arrayFile = fs.readFileSync(URL, "UTF-8").split("\r\n");
 
 //Convierte el .txt en un objeto ordenado key=(Nombre de empleado), value= (array ordenada por semana)
+
 const orderBYWeeks = (tableText) => {
-  let obj = {};
+  const ACMEemployees = {};
   tableText.map((element) => {
     let orders = [];
     let index = element.indexOf("=");
-    obj[element.slice(0, index)] = element
+    ACMEemployees[element.slice(0, index)] = element
       .slice(index + 1)
       .split(",")
       .map((time) => {
@@ -42,45 +43,32 @@ const orderBYWeeks = (tableText) => {
         return orders;
       })[0];
   });
-  return obj;
+  return ACMEemployees;
 };
+const ObjSchedule = orderBYWeeks(arrayFile);
 
-const convertToMinutes = (string) => {
-  let timeLampse = [];
-  let indexTime = string.indexOf("-");
-  let timeStart = string.slice(2, indexTime).split(":");
-  timeStart = parseInt(timeStart[0]) * 60 + parseInt(timeStart[1]);
-  let timeEnd = string.slice(indexTime + 1).split(":");
-  timeEnd = parseInt(timeEnd[0]) * 60 + parseInt(timeEnd[1]);
-
-  for (let i = timeStart; i < timeEnd; i++) {
-    timeLampse.push(i);
-  }
-
-  return timeLampse;
-};
-
-let ObjSchedule = orderBYWeeks(arrayFile);
-
-const tableGroups = (schedule) => {
- 
+const workTableTogether = (schedule) => {
   let coworkers = {};
 
   let keys = Object.keys(schedule);
   for (let i = 0; i < keys.length; i++) {
     for (let j = i + 1; j < keys.length; j++) {
-      coworkers[`${keys[i]} - ${keys[j]} `]
+      if (keys[i] && keys[j]) {
+        coworkers[`${keys[i]} - ${keys[j]} `] = accumulatorTime(
+          schedule[keys[i]],
+          schedule[keys[j]]
+        );
+      }
     }
   }
-  console.log(coworkers);
+  return coworkers;
 };
 
-
-
-tableGroups(ObjSchedule);
+const employeeTable= workTableTogether(ObjSchedule)
+console.table(employeeTable);
 
 // exports
 module.exports = {
   orderBYWeeks,
-  convertToMinutes,
+  workTableTogether,
 };
