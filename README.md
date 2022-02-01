@@ -19,6 +19,7 @@ inside said folder
 4. Remove comment slashes (//),
 from lines 67 and 68 inside ./src/index.js
 ![image](https://user-images.githubusercontent.com/70674906/150670955-b9eabdc5-a6c3-42ce-9fbd-69a1d712d4d7.png)
+modify the URL variable on line 3 to match the location of the .txt file on your machine.
 
 5. Go to the src folder with your console and run the command
 ```bash
